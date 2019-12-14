@@ -1,5 +1,5 @@
 {
-  "name": "ben",
+  "name": "ben-cli",
   "version": "1.0.0",
   "description": "Ben a git helper",
   "main": "index.js",
@@ -12,9 +12,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/delino12/ben.git"
-  },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org"
   },
   "keywords": [
     "node",
