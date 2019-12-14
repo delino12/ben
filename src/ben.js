@@ -30,18 +30,8 @@ var greet = () => {
 }
 
 var commit = (message) => {
-	exec(`git add .`, (error, stdout, stderr) => {
+	exec(`git add . && git commit -m "${message}"`, (error, stdout, stderr) => {
 	    console.log(`tracking....`);
-	    if(stderr){
-	    	console.warn(`stderr: ${stderr}`);
-	    }
-	    if (error !== null) {
-	        console.log(`exec error: ${error}`);
-	    }
-	});
-
-	exec(`git commit -m "${message}"`, (error, stdout, stderr) => {
-	    console.log(`${stdout}`);
 	    if(stderr){
 	    	console.warn(`stderr: ${stderr}`);
 	    }
