@@ -32,6 +32,7 @@ var greet = () => {
 var commit = (message) => {
 	exec(`git add . && git commit -m "${message}"`, (error, stdout, stderr) => {
 	    console.log(`tracking....`);
+	    console.log(`comitting....`);
 	    if(stdout){
 	    	console.log(stdout);
 	    }

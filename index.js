@@ -26,8 +26,7 @@ programmer.command('save this').alias('ss').description('Track changes and reque
 		name: 'message',
 		message: 'What will you like to call this change?'
 	}]).then(function (answers) {
-        console.log(answers);
-        console.log('committing...');
+        // console.log(answers);
         commit(answers.message);
     })
 });
