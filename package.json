@@ -1,0 +1,25 @@
+{
+  "name": "ben",
+  "version": "1.0.0",
+  "description": "Ben a git helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delino12/ben.git"
+  },
+  "keywords": [
+    "node",
+    "git",
+    "cmd",
+    "cli"
+  ],
+  "author": "Ekpoto Liberty Bernard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delino12/ben/issues"
+  },
+  "homepage": "https://github.com/delino12/ben#readme"
+}
