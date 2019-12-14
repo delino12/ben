@@ -5,6 +5,7 @@ var repository 	= require('./src/ben').repository;
 var status 		= require('./src/ben').status;
 var greet 		= require('./src/ben').greet;
 var commit      = require('./src/ben').commit;
+var push      = require('./src/ben').push;
 
 programmer.version('1.0.0').description('Welcome to Ben git helper');
 programmer.command('hello').alias('hi').description('Greetings').action(() => {
@@ -19,7 +20,7 @@ programmer.command('show status').alias('ss').description('Show project status a
 	status();
 });
 
-programmer.command('save this').alias('ss').description('Track changes and request commit message').action(() => {
+programmer.command('save this').alias('st').description('Track changes and request commit message').action(() => {
 	// commit();
 	inquirer.prompt([{
 		type: 'input',
@@ -29,6 +30,11 @@ programmer.command('save this').alias('ss').description('Track changes and reque
         // console.log(answers);
         commit(answers.message);
     })
+});
+
+programmer.command('push').alias('p').description('Push changes to repository!').action(() => {
+	// commit();
+    push();
 });
 
 programmer.parse(process.argv);

@@ -15,7 +15,7 @@ To install ben
 - ben which repo
 - ben show status
 - ben track changes
-- ben commit changes
+- ben save this
 - ben push
 - ben pull 
 - ben stash
