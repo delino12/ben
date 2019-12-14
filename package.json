@@ -14,7 +14,7 @@
     "url": "git+https://github.com/delino12/ben.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/delino12"
+    "registry": "http://registry.npmjs.org"
   },
   "keywords": [
     "node",
