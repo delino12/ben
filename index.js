@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-var inquirer = require('inquirer');
+var inquirer 	= require('inquirer');
 var programmer 	= require('commander');
 var repository 	= require('./src/ben').repository;
 var status 		= require('./src/ben').status;
 var greet 		= require('./src/ben').greet;
 var commit      = require('./src/ben').commit;
-var push      = require('./src/ben').push;
+var push      	= require('./src/ben').push;
+var pull      	= require('./src/ben').pull;
 
 programmer.version('1.0.0').description('Welcome to Ben git helper');
 programmer.command('hello').alias('hi').description('Greetings').action(() => {
@@ -35,6 +36,11 @@ programmer.command('save this').alias('st').description('Track changes and reque
 programmer.command('push').alias('p').description('Push changes to repository!').action(() => {
 	// commit();
     push();
+});
+
+programmer.command('pull').alias('d').description('Pull changes to repository!').action(() => {
+	// commit();
+    pull();
 });
 
 programmer.parse(process.argv);

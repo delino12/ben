@@ -60,4 +60,19 @@ var push = (message) => {
 	});
 }
 
-module.exports = {repository, status, commit, greet, push};
+var pull = (message) => {
+	console.log(`pulling....`);
+	exec(`git pull`, (error, stdout, stderr) => {    
+	    if(stdout){
+	    	console.log(stdout);
+	    }
+	    if(stderr){
+	    	console.warn(`stderr: ${stderr}`);
+	    }
+	    if (error !== null) {
+	        console.log(`exec error: ${error}`);
+	    }
+	});
+}
+
+module.exports = {repository, status, commit, greet, push, pull};
